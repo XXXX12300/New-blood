@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Página de Carga</title>
+
+  <!-- ========== FAVICON ========== -->
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+  <!-- ========== Open Graph (Para redes sociales y Google) ========== -->
+  <meta property="og:title" content="Mi Página de Carga">
+  <meta property="og:description" content="Esta es una página de carga con redirección automática.">
+  <meta property="og:image" content="https://i.ibb.co/qL0Kr5mT/erasebg-transformed.png"> <!-- Aquí pondrás la URL de tu imagen -->
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://tudominio.com"> <!-- URL de tu página -->
+
+  <!-- ========== META DATA ========== -->
+  <meta name="description" content="Esta página muestra un panel de carga y redirige a otra web automáticamente.">
+
+  <style>
+    /* Ocupa toda la pantalla en negro */
+    body, html {
+      margin: 0; 
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+    }
+
+    /* Contenedor centrado en pantalla */
+    .preloader {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Imagen GIF de "cargando" */
+    .preloader img {
+      width: 150px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <!-- Panel de carga (puedes usar un GIF o solo texto) -->
+  <div class="preloader">
+    <img src="https://i.ibb.co/qL0Kr5mT/erasebg-transformed.png" alt="Cargando..." />
+  </div>
+
+  <script>
+    // Al finalizar la carga de la página
+    window.addEventListener('load', function() {
+      // Esperar 2 segundos y luego redirigir
+      setTimeout(() => {
+        window.location.href = "https://newbloodsvq.onrender.com"; // Cambia la URL de destino
+      }, 100); // 2000 milisegundos = 2 segundos
+    });
+  </script>
+</body>
+</html>
