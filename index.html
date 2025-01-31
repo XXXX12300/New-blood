@@ -97,7 +97,7 @@
 
     function fillEffect() {
       if (percentage > 0) {
-        let randomSpeed = Math.random() * 3 + 1; // Velocidad entre 1% y 4% por iteración
+    let randomSpeed = Math.random() * 1.7 + 0.3; // Velocidad entre 0.3% y 2% por iteración
         percentage -= randomSpeed;
         image.style.clipPath = `inset(${percentage}% 0 0 0)`;
         setTimeout(fillEffect, 100); // Cambia la velocidad cada 0.1s
@@ -111,8 +111,8 @@
 
     // Redirección automática después de 8 segundos
     setTimeout(() => {
-      window.location.href = "https://ibb.co/KcNdrwVT"; // Cambia la URL de destino
-    }, 8000);
+      window.location.href = "newbloodsvq.onrender.com"; // Cambia la URL de destino
+    }, 5000);
   </script>
 </body>
 </html>
