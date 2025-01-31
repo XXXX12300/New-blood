@@ -6,12 +6,12 @@
   <title>New Blood - Evento de Freestyle en Sevilla</title>
 
   <!-- ========== FAVICON ========== -->
-  <link rel="shortcut icon" href="https://ibb.co/KcNdrwVT" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://i.ibb.co/KcNdrwVT" type="image/x-icon" />
 
   <!-- ========== Open Graph (Para redes sociales y Google) ========== -->
   <meta property="og:title" content="New Blood - Evento de Freestyle en Sevilla">
   <meta property="og:description" content="New Blood Freestyle, el mejor evento de rap improvisado en Sevilla. Descubre el under sevillano con los mejores freestylers.">
-  <meta property="og:image" content="https://ibb.co/KcNdrwVT">
+  <meta property="og:image" content="https://i.ibb.co/KcNdrwVT">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -30,27 +30,36 @@
       width: 100%;
       height: 100%;
       background: #000;
-    }
-
-    /* Contenedor centrado en pantalla */
-    .preloader {
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+
+    /* Contenedor de la imagen */
+    .preloader {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    /* Imagen base */
+    .preloader img {
       width: 100%;
       height: 100%;
+      object-fit: cover;
+      position: absolute;
+      bottom: 0;
+      clip-path: inset(100% 0 0 0); /* Empieza totalmente oculta */
     }
 
-    /* Imagen GIF de "cargando" */
-    .preloader img {
-      width: 150px;
-      height: auto;
-    }
-
-    /* SEO TEXT (Oculto para usuarios, pero visible para Google) */
+    /* SEO TEXT (Oculto para usuarios, pero visible para SEO) */
     .seo-text {
       position: absolute;
-      left: -9999px; /* Lo aleja visualmente sin ocultarlo del SEO */
+      left: -9999px;
       width: 1px;
       height: 1px;
       overflow: hidden;
@@ -58,9 +67,9 @@
   </style>
 </head>
 <body>
-  <!-- Panel de carga -->
+  <!-- Panel de carga con efecto de llenado -->
   <div class="preloader">
-    <img src="https://media.giphy.com/media/52qtwCtj9OLTi/giphy.gif" alt="Cargando..." />
+    <img id="loadingImage" src="https://i.ibb.co/qL0Kr5mT/erasebg-transformed.png" alt="Cargando..." />
   </div>
 
   <!-- Texto SEO oculto pero indexable -->
@@ -82,13 +91,28 @@
   </div>
 
   <script>
-    // Al finalizar la carga de la página
-    window.addEventListener('load', function() {
-      // Esperar 2 segundos y luego redirigir
-      setTimeout(() => {
-        window.location.href = "https://ibb.co/KcNdrwVT"; // Cambia la URL de destino
-      }, 8000); // 2 segundos de espera
-    });
+    // Efecto de llenado con velocidad aleatoria
+    let percentage = 100;
+    const image = document.getElementById('loadingImage');
+
+    function fillEffect() {
+      if (percentage > 0) {
+        let randomSpeed = Math.random() * 3 + 1; // Velocidad entre 1% y 4% por iteración
+        percentage -= randomSpeed;
+        image.style.clipPath = `inset(${percentage}% 0 0 0)`;
+        setTimeout(fillEffect, 100); // Cambia la velocidad cada 0.1s
+      } else {
+        image.style.clipPath = 'inset(0 0 0 0)'; // Imagen completamente visible
+      }
+    }
+
+    // Inicia la animación
+    fillEffect();
+
+    // Redirección automática después de 8 segundos
+    setTimeout(() => {
+      window.location.href = "https://ibb.co/KcNdrwVT"; // Cambia la URL de destino
+    }, 8000);
   </script>
 </body>
 </html>
