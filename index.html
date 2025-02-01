@@ -4,9 +4,12 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>New Blood - Evento de Freestyle en Sevilla</title>
+  
+  <!-- ========== FAVICON (GitHub Pages) ========== -->
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
-  <!-- ========== FAVICON ========== -->
-  <link rel="shortcut icon" href="https://i.ibb.co/KcNdrwVT" type="image/x-icon" />
+  <!-- ========== CANONICAL LINK ========== -->
+  <link rel="canonical" href="https://newbloodsvq.onrender.com" />
 
   <!-- ========== Open Graph (Para redes sociales y Google) ========== -->
   <meta property="og:title" content="New Blood - Evento de Freestyle en Sevilla">
@@ -15,12 +18,46 @@
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:url" content="https://tudominio.com">
+  <meta property="og:url" content="https://newbloodsvq.onrender.com">
 
   <!-- ========== META DATA ========== -->
-  <meta name="description" content="New Blood Freestyle es un evento de rap improvisado en Sevilla. Concierto de freestyle con artistas del under sevillano, ideal para la juventud apasionada por el hip hop.">
-  <meta name="keywords" content="New Blood, eventos de freestyle, under sevillano, rap improvisado, concierto Sevilla, evento Sevilla, Sevilla joven, freestyle underground">
+  <meta name="description" content="New Blood Freestyle es un evento de rap improvisado en Sevilla. Concierto de freestyle con artistas del under sevillano, ideal para la juventud apasionada por el hip hop. Si buscas freestyle sevilla, new blood sevilla o new blood freestyle, aquí lo encontrarás.">
+  <meta name="keywords" content="New Blood, eventos de freestyle, under sevillano, rap improvisado, concierto Sevilla, evento Sevilla, Sevilla joven, freestyle underground, freestyle sevilla, new blood sevilla, new blood freestyle">
   <meta name="author" content="New Blood Freestyle">
+
+  <!-- ========== SCHEMA ORG (JSON-LD) ========== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "New Blood Freestyle",
+    "description": "El mejor evento de rap improvisado en Sevilla",
+    "startDate": "2025-03-15T20:00",
+    "endDate": "2025-03-15T23:59",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "location": {
+      "@type": "Place",
+      "name": "Sevilla",
+      "address": "Sevilla, España"
+    },
+    "image": [
+      "https://i.ibb.co/KcNdrwVT"
+    ],
+    "offers": {
+      "@type": "Offer",
+      "url": "https://newbloodsvq.onrender.com",
+      "price": "10",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock",
+      "validFrom": "2025-02-01T12:00"
+    },
+    "performer": {
+      "@type": "MusicGroup",
+      "name": "New Blood Freestyle MCs"
+    }
+  }
+  </script>
 
   <style>
     /* Ocupa toda la pantalla en negro */
@@ -33,6 +70,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      font-family: Arial, sans-serif;
     }
 
     /* Contenedor de la imagen */
@@ -41,6 +79,7 @@
       width: 200px;
       height: 200px;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       overflow: hidden;
@@ -56,6 +95,15 @@
       clip-path: inset(100% 0 0 0); /* Empieza totalmente oculta */
     }
 
+    /* Texto "Cargando..." */
+    .loading-text {
+      margin-top: 210px; /* Para que quede justo debajo de la imagen */
+      color: #fff;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
     /* SEO TEXT (Oculto para usuarios, pero visible para SEO) */
     .seo-text {
       position: absolute;
@@ -69,7 +117,8 @@
 <body>
   <!-- Panel de carga con efecto de llenado -->
   <div class="preloader">
-    <img id="loadingImage" src="https://i.ibb.co/qL0Kr5mT/erasebg-transformed.png" alt="Cargando..." />
+    <img id="loadingImage" src="https://i.ibb.co/qL0Kr5mT/erasebg-transformed.png" alt="Icono cargando" />
+    <p class="loading-text">Cargando...</p>
   </div>
 
   <!-- Texto SEO oculto pero indexable -->
@@ -97,7 +146,7 @@
 
     function fillEffect() {
       if (percentage > 0) {
-    let randomSpeed = Math.random() * 1.7 + 0.3; // Velocidad entre 0.3% y 2% por iteración
+        let randomSpeed = Math.random() * 1.7 + 0.3; // Velocidad entre 0.3% y 2% por iteración
         percentage -= randomSpeed;
         image.style.clipPath = `inset(${percentage}% 0 0 0)`;
         setTimeout(fillEffect, 100); // Cambia la velocidad cada 0.1s
@@ -109,10 +158,10 @@
     // Inicia la animación
     fillEffect();
 
-    // Redirección automática después de 8 segundos
+    // Redirección automática después de 3 segundos
     setTimeout(() => {
       window.location.href = "https://newbloodsvq.onrender.com"; // Cambia la URL de destino
-    }, 5000);
+    }, 3000);
   </script>
 </body>
 </html>
