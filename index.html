@@ -154,7 +154,7 @@
         let randomSpeed = Math.random() * 2 + 0.9; // Velocidad entre 0.3% y 2% por iteración
         percentage -= randomSpeed;
         image.style.clipPath = `inset(${percentage}% 0 0 0)`;
-        setTimeout(fillEffect, 100); // Cambia la velocidad cada 0.1s
+        setTimeout(fillEffect, 9000); // Cambia la velocidad cada 0.1s
       } else {
         image.style.clipPath = 'inset(0 0 0 0)'; // Imagen completamente visible
       }
