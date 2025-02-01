@@ -14,7 +14,7 @@
   <!-- ========== Open Graph (Para redes sociales y Google) ========== -->
   <meta property="og:title" content="New Blood - Evento de Freestyle en Sevilla">
   <meta property="og:description" content="New Blood Freestyle, el mejor evento de rap improvisado en Sevilla. Descubre el under sevillano con los mejores freestylers.">
-  <meta property="og:image" content="https://i.ibb.co/KcNdrwVT">
+  <meta property="og:image" content="favicon.ico">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -117,7 +117,7 @@
 <body>
   <!-- Panel de carga con efecto de llenado -->
   <div class="preloader">
-    <img id="loadingImage" src="https://i.ibb.co/qL0Kr5mT/erasebg-transformed.png" alt="Icono cargando" />
+    <img id="loadingImage" src="favicon.ico" alt="Icono cargando" />
     <p class="loading-text">Cargando...</p>
   </div>
 
@@ -146,7 +146,7 @@
 
     function fillEffect() {
       if (percentage > 0) {
-        let randomSpeed = Math.random() * 1.7 + 0.3; // Velocidad entre 0.3% y 2% por iteración
+        let randomSpeed = Math.random() * 2 + 0.9; // Velocidad entre 0.3% y 2% por iteración
         percentage -= randomSpeed;
         image.style.clipPath = `inset(${percentage}% 0 0 0)`;
         setTimeout(fillEffect, 100); // Cambia la velocidad cada 0.1s
