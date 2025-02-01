@@ -3,39 +3,49 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CARGANDO...</title>
-    <link rel="icon" type="image/png" sizes="512x512" href="favicon.ico" />
+  <title>New Blood Freestyle - Evento de Freestyle en SVQ</title>
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="favicon.ico" />
   <link rel="icon" type="image/png" sizes="192x192" href="favicon.ico" />
-
-  
-  <!-- ========== FAVICON (GitHub Pages) ========== -->
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
-  <!-- ========== CANONICAL LINK ========== -->
+  <!-- CANONICAL URL -->
   <link rel="canonical" href="https://newbloodsvq.onrender.com" />
 
-  <!-- ========== Open Graph (Para redes sociales y Google) ========== -->
-  <meta property="og:title" content="New Blood - Evento de Freestyle en Sevilla">
-  <meta property="og:description" content="New Blood Freestyle, el mejor evento de rap improvisado en Sevilla. Descubre el under sevillano con los mejores freestylers.">
+  <!-- Open Graph (Facebook, WhatsApp, Instagram) -->
+  <meta property="og:title" content="New Blood Freestyle - Batallas de Rap en Sevilla">
+  <meta property="og:description" content="New Blood Freestyle es el mejor evento de freestyle en Sevilla y SVQ. Descubre el underground sevillano con las mejores batallas de rap improvisado.">
   <meta property="og:image" content="favicon.ico">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:url" content="https://newbloodsvq.onrender.com">
+  <meta property="og:type" content="website">
 
-  <!-- ========== META DATA ========== -->
-  <meta name="description" content="New Blood Freestyle es un evento de rap improvisado en Sevilla. Concierto de freestyle con artistas del under sevillano, ideal para la juventud apasionada por el hip hop. Si buscas freestyle sevilla, new blood sevilla o new blood freestyle, aquí lo encontrarás.">
-  <meta name="keywords" content="New Blood, eventos de freestyle, under sevillano, rap improvisado, concierto Sevilla, evento Sevilla, Sevilla joven, freestyle underground, freestyle sevilla, new blood sevilla, new blood freestyle">
+  <!-- Twitter Cards -->
+  <meta name="twitter:title" content="New Blood Freestyle - Freestyle en Sevilla">
+  <meta name="twitter:description" content="Descubre las mejores batallas de freestyle en Sevilla con New Blood SVQ. Rap improvisado y cultura hip-hop.">
+  <meta name="twitter:image" content="favicon.ico">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Meta Description (SEO) -->
+  <meta name="description" content="New Blood Freestyle es el evento más esperado del freestyle en Sevilla y SVQ. Disfruta de batallas de rap improvisado con los mejores MCs del under. Hip-hop, eventos, conciertos y freestyle underground.">
+
+  <!-- Meta Keywords (SEO Mejorado) -->
+  <meta name="keywords" content="New Blood, freestyle Sevilla, freestyle SVQ, New Blood Freestyle, New Blood SVQ, batallas de freestyle, rap improvisado, conciertos Sevilla, eventos hip hop, rap under, freestyle underground, hip hop Sevilla, MCs SVQ, batalla de gallos Sevilla, evento de freestyle, hip hop under, cultura urbana Sevilla, improvisación rap, freestyle competición, festival hip hop Sevilla, batallas de MCs, freestyle under, talento emergente freestyle, festival de rap improvisado, competiciones de freestyle en SVQ, hip hop underground SVQ, música urbana Sevilla, evento hip hop SVQ">
+
+  <!-- Autor -->
   <meta name="author" content="New Blood Freestyle">
 
-  <!-- ========== SCHEMA ORG (JSON-LD) ========== -->
+  <!-- Schema.org JSON-LD (Mejorado con más detalles SEO) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Event",
-    "name": "New Blood Freestyle",
-    "description": "El mejor evento de rap improvisado en Sevilla",
+    "name": "New Blood Freestyle - Batallas de Rap en SVQ",
+    "description": "El mejor evento de freestyle en Sevilla y SVQ con los mejores MCs del underground.",
     "startDate": "2025-03-15T20:00",
     "endDate": "2025-03-15T23:59",
     "eventStatus": "https://schema.org/EventScheduled",
@@ -45,9 +55,7 @@
       "name": "Sevilla",
       "address": "Sevilla, España"
     },
-    "image": [
-      "https://i.ibb.co/KcNdrwVT"
-    ],
+    "image": ["https://i.ibb.co/KcNdrwVT"],
     "offers": {
       "@type": "Offer",
       "url": "https://newbloodsvq.onrender.com",
@@ -64,7 +72,7 @@
   </script>
 
   <style>
-    /* Ocupa toda la pantalla en negro */
+    /* Fondo negro con carga central */
     body, html {
       margin: 0; 
       padding: 0;
@@ -77,11 +85,10 @@
       font-family: Arial, sans-serif;
     }
 
-    /* Contenedor de la imagen */
     .preloader {
       position: relative;
-      width: 200px;
-      height: 200px;
+      width: 150px;
+      height: 150px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -89,26 +96,24 @@
       overflow: hidden;
     }
 
-    /* Imagen base */
     .preloader img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       position: absolute;
       bottom: 0;
-      clip-path: inset(100% 0 0 0); /* Empieza totalmente oculta */
+      clip-path: inset(100% 0 0 0);
+      transition: clip-path 0.1s linear;
     }
 
-    /* Texto "Cargando..." */
     .loading-text {
-      margin-top: 210px; /* Para que quede justo debajo de la imagen */
+      margin-top: 160px;
       color: #fff;
       font-size: 16px;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
 
-    /* SEO TEXT (Oculto para usuarios, pero visible para SEO) */
     .seo-text {
       position: absolute;
       left: -9999px;
@@ -119,61 +124,37 @@
   </style>
 </head>
 <body>
-  <!-- Panel de carga con efecto de llenado -->
+  <!-- Animación de carga -->
   <div class="preloader">
-    <img id="loadingImage" src="favicon.ico" alt="Icono cargando" />
-    <p class="loading-text">...</p>
+    <img id="loadingImage" src="favicon.ico" alt="Cargando freestyle SVQ" />
+    <p class="loading-text">Cargando...</p>
   </div>
 
-  <!-- Texto SEO oculto pero indexable -->
+  <!-- Texto oculto para SEO -->
   <div class="seo-text">
-    <h2>New Blood - Freestyle y Rap en Sevilla</h2>
+    <h1>New Blood Freestyle - Batallas de Rap en SVQ</h1>
+    <h2>Eventos de freestyle en Sevilla y SVQ</h2>
     <p>
-      New Blood Freestyle es el evento más esperado del freestyle underground en SVQ. Un espectáculo donde los mejores MCs del under se enfrentan en intensas batallas de rap improvisado, demostrando talento, ingenio y pura creatividad sobre el escenario.
-
-Si buscas un evento de freestyle en SVQ, New Blood es el lugar donde nacen las leyendas. Aquí, el rap improvisado cobra vida con flows brutales, punchlines afilados y rimas que sacuden a la audiencia. Es más que una competición, es un concierto de freestyle que representa la esencia del hip hop.
-
-<br><br>
-
-Nuestra competición se ha convertido en un referente para la cultura freestyle en SVQ, reuniendo a los mejores talentos emergentes y grandes promesas del rap. Además de las batallas de freestyle, el evento ofrece música en vivo, DJ sets, invitados especiales y un ambiente que solo el underground sevillano puede ofrecer.
-
-Si te apasiona el freestyle en SVQ, New Blood Freestyle es una cita obligada. Aquí, cada rima es un golpe, cada enfrentamiento es un show y cada evento deja huella en la escena.
-
-<br><br>
-
-🔥 ¿Eres un verdadero amante del freestyle? 🔥
-En New Blood, buscamos a los MCs más duros del freestyle under. Si te vibra el hip hop y quieres ver a los mejores rimadores de SVQ en acción, este es el evento que estabas esperando. Ven, apoya la escena y descubre a las futuras estrellas del freestyle.
-
-📢 No te pierdas nada 📢
-Sigue nuestras redes para estar al día con los próximos eventos de freestyle en SVQ. Aquí, la cultura hip hop nunca duerme.
-
-Palabras clave: freestyle, freestyle SVQ, New Blood, New Blood Freestyle, batallas de freestyle, rap improvisado, rap underground, freestyle under, concierto de freestyle, eventos freestyle SVQ, SVQ hip hop, Sevilla freestyle, batalla de gallos SVQ.
+      New Blood Freestyle es el evento líder de freestyle en SVQ. Batallas de rap improvisado, competiciones de freestyle y la mejor música hip-hop del underground sevillano. Ven a disfrutar de un concierto único y apoya el talento emergente de MCs en freestyle Sevilla.
+    </p>
+    <p>
+      Freestyle, batallas de freestyle, rap under, hip hop en Sevilla, freestyle SVQ, conciertos de freestyle, batallas de MCs en SVQ.
     </p>
   </div>
 
   <script>
-    // Efecto de llenado con velocidad aleatoria
     let percentage = 100;
     const image = document.getElementById('loadingImage');
 
     function fillEffect() {
       if (percentage > 0) {
-        let randomSpeed = Math.random() * 2 + 0.9; // Velocidad entre 0.3% y 2% por iteración
-        percentage -= randomSpeed;
+        percentage -= 2;
         image.style.clipPath = `inset(${percentage}% 0 0 0)`;
-        setTimeout(fillEffect, 12000); // Cambia la velocidad cada 0.1s
-      } else {
-        image.style.clipPath = 'inset(0 0 0 0)'; // Imagen completamente visible
+        requestAnimationFrame(fillEffect);
       }
     }
-
-    // Inicia la animación
-    fillEffect();
-
-    // Redirección automática después de 3 segundos
-    setTimeout(() => {
-      window.location.href = "https://newbloodsvq.onrender.com"; // Cambia la URL de destino
-    }, 3000);
+    image.onload = function() { requestAnimationFrame(fillEffect); };
+    setTimeout(() => { window.location.href = "https://newbloodsvq.onrender.com"; }, 3000);
   </script>
 </body>
 </html>
